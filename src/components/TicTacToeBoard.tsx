@@ -4,7 +4,7 @@ import { Player, BoardState, GameStatus, GameDifficulty, PlayerStats } from './g
 import GameBoard from './game/GameBoard';
 import GameControls from './game/GameControls';
 import GameStats from './game/GameStats';
-import GameStatus from './game/GameStatus';
+import GameStatusDisplay from './game/GameStatusDisplay';
 
 const WINNING_COMBINATIONS = [
   [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
@@ -178,7 +178,7 @@ const TicTacToeBoard: React.FC = () => {
 
         <GameStats stats={playerStats} />
 
-        <GameStatus 
+        <GameStatusDisplay 
           gameStatus={gameStatus}
           isPlayerTurn={isPlayerTurn}
           winningPlayer={winnerCombination.length > 0 ? board[winnerCombination[0]] : null}

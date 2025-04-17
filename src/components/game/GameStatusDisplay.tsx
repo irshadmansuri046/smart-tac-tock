@@ -2,13 +2,13 @@
 import React from 'react';
 import { GameStatus, Player } from './types';
 
-interface GameStatusProps {
+interface GameStatusDisplayProps {
   gameStatus: GameStatus;
   isPlayerTurn: boolean;
   winningPlayer: Player;
 }
 
-const GameStatus = ({ gameStatus, isPlayerTurn, winningPlayer }: GameStatusProps) => {
+const GameStatusDisplay = ({ gameStatus, isPlayerTurn, winningPlayer }: GameStatusDisplayProps) => {
   return (
     <div className="text-sm text-muted-foreground text-center animate-appear">
       {gameStatus === 'playing' ? (
@@ -26,4 +26,4 @@ const GameStatus = ({ gameStatus, isPlayerTurn, winningPlayer }: GameStatusProps
   );
 };
 
-export default GameStatus;
+export default GameStatusDisplay;
