@@ -26,12 +26,12 @@ const Cross3D = () => {
     <group ref={groupRef}>
       <mesh position={[0, 0, 0]} rotation={[0, 0, Math.PI / 4]}>
         <boxGeometry args={[0.8, 0.2, 0.2]} />
-        <meshStandardMaterial color="#0A84FF" />
+        <meshStandardMaterial attach="material" color="#0A84FF" />
         <Edges />
       </mesh>
       <mesh position={[0, 0, 0]} rotation={[0, 0, -Math.PI / 4]}>
         <boxGeometry args={[0.8, 0.2, 0.2]} />
-        <meshStandardMaterial color="#0A84FF" />
+        <meshStandardMaterial attach="material" color="#0A84FF" />
         <Edges />
       </mesh>
     </group>

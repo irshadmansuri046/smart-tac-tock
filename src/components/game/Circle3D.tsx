@@ -28,7 +28,7 @@ const Circle3D = () => {
       args={[0.3, 0.1, 16, 32]}
       position={[0, 0, 0]}
     >
-      <meshStandardMaterial color="#FF453A" />
+      <meshStandardMaterial attach="material" color="#FF453A" />
     </Torus>
   );
 };
