@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { X, Circle } from 'lucide-react';
 import { toast } from 'sonner';
+import GameCell3D from './game/GameCell3D';
 
 type Player = 'X' | 'O' | null;
 type BoardState = Player[];
@@ -216,8 +216,7 @@ const TicTacToeBoard: React.FC = () => {
                   disabled={cell !== null || gameStatus !== 'playing' || !isPlayerTurn}
                   aria-label={`Cell ${index}`}
                 >
-                  {cell === 'X' && <X className="w-8 h-8 animate-bounce-in" />}
-                  {cell === 'O' && <Circle className="w-8 h-8 animate-bounce-in" />}
+                  <GameCell3D symbol={cell} />
                   {cell === null && <span className="opacity-0">_</span>}
                 </button>
               ))}
